@@ -1,0 +1,22 @@
+server:
+  port: 8443
+  servlet:
+    context-path: /developssl
+  ssl:
+    key-store-type: JKS
+    key-store: classpath:keystore/https-prueba.jks
+    key-store-password: password
+    key-alias: https-prueba
+  
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:security_permission;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: 
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database: H2
+    show-sql: true
